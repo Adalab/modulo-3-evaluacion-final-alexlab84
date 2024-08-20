@@ -1,0 +1,44 @@
+@import './core/reset';
+@import './core/variables';
+
+@font-face {
+  font-family: 'HarryP';
+  src: url('./core/assets/HarryP-MVZ6w.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Aplica la fuente a todo el proyecto o a elementos específicos */
+.title {
+  font-family: 'HarryP', sans-serif;
+}
+
+.main {
+    display: grid;
+    row-gap: 3rem;
+  
+    @media (min-width: 600px) {
+      grid-template-columns: 2fr 3fr;
+      column-gap: 3rem;
+    }
+  }
+  
+  .form {
+    &__section {
+      width: 300px;
+      margin-inline: auto;
+      margin-bottom: 1rem;
+      display: grid;
+      grid-template-columns: 5em 1fr;
+  
+      @media (min-width: 600px) {
+        width: 100%;
+        grid-template-columns: 9em 1fr;
+      }
+    }
+  }
+
+  .card__img {
+    width: 100px;
+    height: 150px;
+  }
