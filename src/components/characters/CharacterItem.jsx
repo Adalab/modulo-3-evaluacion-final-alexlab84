@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { translateSpecies } from '../../utils/translation';
-
+import { Link } from 'react-router-dom';
 
 function CharacterItem({character}) {
 
@@ -9,7 +9,7 @@ function CharacterItem({character}) {
     
 
   return (
-    <div>
+    <Link to={`/detail/${character.id}`} className='details'>
       <img
         src={character.image ? character.image : 'https://via.placeholder.com/210x295/ffffff/666666/?text=HP'}
         alt={`Foto de ${character.name}`}
@@ -18,7 +18,7 @@ function CharacterItem({character}) {
 
       <h2 className="card__title">{character.name}</h2>
       <p className="card__description">{translateSpecies(character.species)}</p>
-    </div>
+    </Link>
   );
 }
 

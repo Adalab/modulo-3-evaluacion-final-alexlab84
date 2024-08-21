@@ -2,8 +2,12 @@ import { useState, useEffect} from "react";
 import CharacterList from "./characters/CharacterList";
 import FilterCharacterAndHouse from "./Filters/FilterCharacterAndHouse";
 import { getCharacters } from "../services/characterApi";
+import CharacterDetail from "./characters/CharacterDetail";
+
 
 import "../styles/App.scss";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 
@@ -23,7 +27,6 @@ function App() {
   const handleInputSearch = (ev) => {
     const characterToSearch = ev.currentTarget.value.toLowerCase();
     setSearch( characterToSearch);
-  
   };
 
   const handleChangeHouseFilter = (ev) => {
@@ -40,6 +43,18 @@ function App() {
     );
   });
 
+  // Encuentra el personaje por ID
+
+  const findCharacter = (id) => {
+    
+    const characterShare = characters.find((character) => character.id === id);
+    
+    return characterShare;
+};
+
+  // Determina el mensaje a mostrar si no hay personajes
+
+  const characterNotFound = search && filteredCharacters.length === 0 ? `No hay ningún personaje que coincida con el nombre "${search}"` : '';
 
   return (
     <div className="page">
@@ -48,15 +63,32 @@ function App() {
       </header>
 
       <main className="main">
-        <FilterCharacterAndHouse 
-          search={search}
-          houseFilter={houseFilter}
-          handleInputSearch={handleInputSearch}
-          handleChangeHouseFilter={handleChangeHouseFilter}
-        />
-        <section className="list">
-          <CharacterList characters={filteredCharacters} />
-        </section>
+
+      <Router>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <FilterCharacterAndHouse
+                    search={search}
+                    houseFilter={houseFilter}
+                    handleInputSearch={handleInputSearch}
+                    handleChangeHouseFilter={handleChangeHouseFilter}
+                  />
+                  <section className="list">
+                    <CharacterList characters={filteredCharacters} 
+                      characterNotFound={characterNotFound}
+                    />
+                  </section>
+                </>
+              }
+            />
+            <Route path="/detail/:id" element={<CharacterDetail findCharacter={findCharacter} />} />
+          </Routes>
+        </Router>
+
+        
       </main>
     </div>
   );
