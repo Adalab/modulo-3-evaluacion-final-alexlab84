@@ -2,9 +2,9 @@ import PropTypes from 'prop-types'
 
 import CharacterItem from "./CharacterItem";
 
-function CharacterList({characters, characterNotFound}) {
+function CharacterList({ characters, characterNotFound }) {
 
-    
+
 
   return (
     <div>
@@ -28,8 +28,8 @@ function CharacterList({characters, characterNotFound}) {
 }
 
 CharacterList.propTypes = {
-    characters: PropTypes.array.isRequired,
-    characterNotFound: PropTypes.string
+  characters: PropTypes.array.isRequired,
+  characterNotFound: PropTypes.string
 };
 
 
