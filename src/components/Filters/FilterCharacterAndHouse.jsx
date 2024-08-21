@@ -6,11 +6,12 @@ function FilterCharacterAndHouse({ search, houseFilter, handleInputSearch, handl
         <div className="form__section">
           <label htmlFor="character">Busca por personaje:</label>
           <input
-            onInput={handleInputSearch}
+            onChange={handleInputSearch}
             type="text"
             name="character"
             id="character"
             value={search}
+            placeholder="Buscar personajes"
           />
   
           <label>Selecciona la casa:</label>
@@ -20,6 +21,7 @@ function FilterCharacterAndHouse({ search, houseFilter, handleInputSearch, handl
             id="house"
             value={houseFilter}
           >
+            <option value="">Todas las casas</option>
             <option value="gryffindor">Gryffindor</option>
             <option value="slytherin">Slytherin</option>
             <option value="ravenclaw">Ravenclaw</option>
