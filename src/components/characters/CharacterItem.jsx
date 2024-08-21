@@ -25,10 +25,11 @@ function CharacterItem({character}) {
 
 CharacterItem.propTypes = {
     character: PropTypes.shape({
+        id: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
         species: PropTypes.string.isRequired,
         image: PropTypes.string.isRequired
-    })
+    }).isRequired
 }
 
 export default CharacterItem;
