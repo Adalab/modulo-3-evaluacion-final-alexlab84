@@ -31,7 +31,14 @@
   font-size: medium;
   color: rgb(2, 49, 49);
   text-align: center;
-  padding: 10px;
+  align-items: center;
+  padding-bottom: 120px;
+  padding-top: 20px;
+}
+
+.containerStructure {
+  background-color: rgb(134, 122, 134);
+  
 }
 
 .containerResetBtn {
@@ -63,8 +70,9 @@
     // display: grid;
     // row-gap: 3rem;
     background-color: rgb(134, 122, 134);
+    
   
-    // @media (min-width: 600px) {
+    // @media (min-width: 600px) 
     //   grid-template-columns: 2fr 3fr;
     //   column-gap: 3rem;
     // }
@@ -85,6 +93,9 @@
   //   }
   // }
 
+
+  
+
   .cardItem {
     width: 100%;
     height: auto;
@@ -98,15 +109,11 @@
   }
 
   .cardItemDetail {
-    width: 100%;
-    height: 100%;
     text-align: center;
     align-items: center;
     border: solid 2px rgb(2, 49, 49);
     border-radius: 20px;
     background-color: rgb(231, 187, 129);
-    line-height: 1;
-    padding-top: 15px;
   }
 
   .detailText {
@@ -174,16 +181,21 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
 .statusIcon {
-  width: 32px;  // Ajusta el tamaño según tu necesidad
+  width: 32px;  
   height: 32px;
   vertical-align: middle;
-  margin-left: 5px;  // Espaciado para separarlo del texto
+  margin-left: 5px;  
 }
 
 .houseIcon {
-  width: 24px;  // Ajusta el tamaño según tu necesidad
+  width: 24px;  
   height: 24px;
-  margin-left: 5px;  // Espaciado para separarlo del texto
+  margin-left: 5px;  
   vertical-align: middle;
 }
+

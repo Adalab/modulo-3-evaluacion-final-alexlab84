@@ -69,7 +69,7 @@ function App() {
 
   return (
     
-    <div className="">
+    <div className="containerStructure">
      
       <header className="header">
         <h1 className="titleHarry">Harry Potter</h1>
@@ -107,9 +107,11 @@ function App() {
           </Routes>
         </Router>
       </main>
+      
       <footer className="footer">
       🧙‍♀️  Alejandrita's Things  🏰 
       </footer>
+      
     </div>
     
   );

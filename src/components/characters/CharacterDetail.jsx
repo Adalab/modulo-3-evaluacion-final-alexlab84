@@ -68,13 +68,13 @@ function CharacterDetail({ findCharacter }) {
                     <img src={corazon} alt="Está vivo" className='statusIcon' /> : 
                     <img src={espinaDePescado} alt="No está vivo" className='statusIcon' />}
             </p>
-                <p className='detailText'>Especie:{characterShare.species}</p>
-                <p className='detailText'>Genero:{characterShare.gender}</p>
+                <p className='detailText'>Especie: {characterShare.species}</p>
+                <p className='detailText'>Genero: {characterShare.gender}</p>
                 {/* Mostrar el ícono de la casa junto con el nombre */}
 
                 <p className='detailText'>
                 Casa: 
-                {characterShare.house}
+                
                 {getHouseIcon(characterShare.house) && (
                     <img 
                         src={getHouseIcon(characterShare.house)} 
@@ -82,12 +82,15 @@ function CharacterDetail({ findCharacter }) {
                         className='houseIcon' 
                     />
                 )}
+                
+             {/*    {characterShare.house} */}
             </p>
                 {/* Muestra los nombres alternativos del personaje, si los tiene */}
                 <p className='detailText'>Nombres alternativos: {characterShare.alternate_names.join(', ') || 'Ninguno'}</p>
                 
                 
         </div>
+        
         </>
     )
 }
