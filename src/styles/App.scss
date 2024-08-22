@@ -3,42 +3,187 @@
 
 @font-face {
   font-family: 'HarryP';
-  src: url('./core/assets/HarryP-MVZ6w.ttf') format('truetype');
+  src: url('../../public/assets/HarryP-MVZ6w.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
-/* Aplica la fuente a todo el proyecto o a elementos específicos */
-.title {
+
+.titleHarry {
   font-family: 'HarryP', sans-serif;
+  padding-bottom: 1.5rem;
+  font-size: 5rem;
+  color: rgb(231, 187, 129);
+  font-weight: normal;
+}
+
+.header {
+  background-color: rgb(134, 122, 134);
+  padding-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer {
+  background-color: rgb(134, 122, 134);
+  font-family: 'HarryP', sans-serif;
+  font-size: medium;
+  color: rgb(2, 49, 49);
+  text-align: center;
+  padding: 10px;
+}
+
+.containerResetBtn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.resetBtn {
+  width: 50%;
+  height: 2em;
+  font-family: 'HarryP', sans-serif;
+  font-size: x-large;
+  color: rgb(2, 49, 49);
+  border-radius: 20px;
+  border: solid 2px rgb(2, 49, 49);
+  background-color: rgb(231, 187, 129);
+}
+
+.backToBtn {
+  color: rgb(2, 49, 49);
+  font-family: 'HarryP', sans-serif;
+  font-size: xx-large;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .main {
-    display: grid;
-    row-gap: 3rem;
+    // display: grid;
+    // row-gap: 3rem;
+    background-color: rgb(134, 122, 134);
   
-    @media (min-width: 600px) {
-      grid-template-columns: 2fr 3fr;
-      column-gap: 3rem;
-    }
+    // @media (min-width: 600px) {
+    //   grid-template-columns: 2fr 3fr;
+    //   column-gap: 3rem;
+    // }
   }
   
-  .form {
-    &__section {
-      width: 300px;
-      margin-inline: auto;
-      margin-bottom: 1rem;
-      display: grid;
-      grid-template-columns: 5em 1fr;
+  // .form {
+  //   &__section {
+  //     width: 300px;
+  //     margin-inline: auto;
+  //     margin-bottom: 1rem;
+  //     display: grid;
+  //     grid-template-columns: 5em 1fr;
   
-      @media (min-width: 600px) {
-        width: 100%;
-        grid-template-columns: 9em 1fr;
-      }
-    }
+  //     @media (min-width: 600px) {
+  //       width: 100%;
+  //       grid-template-columns: 9em 1fr;
+  //     }
+  //   }
+  // }
+
+  .cardItem {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    border: solid 2px rgb(2, 49, 49);
+    border-radius: 20px;
+    background-color: rgb(231, 187, 129);
+    padding-top: 30px;
+    margin-block: 20px;
+    padding-inline: 5px;
   }
 
-  .card__img {
-    width: 100px;
-    height: 150px;
+  .cardItemDetail {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    border: solid 2px rgb(2, 49, 49);
+    border-radius: 20px;
+    background-color: rgb(231, 187, 129);
+    line-height: 1;
+    padding-top: 15px;
   }
+
+  .detailText {
+    font-family: 'HarryP', sans-serif;
+    font-size: x-large;
+    color: rgb(2, 49, 49);
+  }
+
+  .detailTextTitle {
+    font-family: 'HarryP', sans-serif;
+    font-size: xx-large;
+    color: rgb(99, 20, 10);
+  }
+
+  .cardList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .speciesCard {
+    font-family: 'HarryP', sans-serif;
+    font-size: x-large;
+    color: rgb(2, 49, 49);
+  }
+
+  .cardImg {
+    width: 200px;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  .cardTitle {
+    font-family: 'HarryP', sans-serif;
+    font-size: xx-large;
+    color: rgb(2, 49, 49);
+  }
+
+.formInputs {
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+  align-items: center;
+}
+
+.input {
+  height: 40px;
+  width: 90%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: solid 2px rgb(2, 49, 49);
+  font-family: 'HarryP', sans-serif;
+  font-size: 140%;
+  color: rgb(2, 49, 49);
+}
+
+.labels {
+  font-family: 'HarryP', sans-serif;
+  font-size: xx-large;
+  color: rgb(231, 187, 129);
+}
+
+a {
+  text-decoration: none;
+}
+
+.statusIcon {
+  width: 32px;  // Ajusta el tamaño según tu necesidad
+  height: 32px;
+  vertical-align: middle;
+  margin-left: 5px;  // Espaciado para separarlo del texto
+}
+
+.houseIcon {
+  width: 24px;  // Ajusta el tamaño según tu necesidad
+  height: 24px;
+  margin-left: 5px;  // Espaciado para separarlo del texto
+  vertical-align: middle;
+}

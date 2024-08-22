@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { translateSpecies } from '../../utils/translation';
 import { Link } from 'react-router-dom';
+import harryRelleno from '../../../public/harryRelleno.png'
 
 // Componente CharacterItem que representa un personaje individual en la lista
 
@@ -9,20 +10,21 @@ function CharacterItem({ character }) {
 
   return (
     // Link de Router que redirige a la página de detalles del personaje seleccionado
-    <Link to={`/detail/${character.id}`} className='details'>
+    <Link to={`/detail/${character.id}`} className=''>
 
       {/* Muestra la imagen del personaje. Si no hay imagen disponible, muestra una de relleno */}
-
+    <div className='cardItem'>
       <img
-        src={character.image ? character.image : 'https://via.placeholder.com/210x295/ffffff/666666/?text=HP'}
+        src={character.image ? character.image : harryRelleno}
         alt={`Foto de ${character.name}`}
-        className="card__img"
+        className="cardImg"
       />
 
-      <h2 className="card__title">{character.name}</h2>
+      <h2 className="cardTitle">{character.name}</h2>
 
       {/* Muestra la especie del personaje, usando la función translateSpecies */}
-      <p className="card__description">{translateSpecies(character.species)}</p>
+      <p className="speciesCard">{translateSpecies(character.species)}</p>
+      </div>
     </Link>
   );
 }

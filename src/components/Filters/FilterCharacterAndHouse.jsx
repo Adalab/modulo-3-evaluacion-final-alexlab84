@@ -3,24 +3,26 @@ import PropTypes from 'prop-types';
 // Componente de formulario para filtrar personajes por nombre y casa
 function FilterCharacterAndHouse({ search, houseFilter, handleInputSearch, handleChangeHouseFilter }) {
   return (
-    <form>
-      <div className="form__section">
-        <label htmlFor="character">Busca por personaje:</label>
+    <form className=''>
+      <div className="formInputs">
+        <label htmlFor="character" className='labels'>Busca por personaje:</label>
         <input
           onChange={handleInputSearch}
           type="text"
           name="character"
           id="character"
           value={search}
-          placeholder="Buscar personajes"
+          placeholder=""
+          className='input'
         />
 
-        <label>Selecciona la casa:</label>
+        <label className='labels'>Selecciona la casa:</label>
         <select
           onChange={handleChangeHouseFilter}
           name="house"
           id="house"
           value={houseFilter}
+          className='input'
         >
           <option value="">Todas las casas</option>
           <option value="gryffindor">Gryffindor</option>

@@ -4,7 +4,9 @@ import FilterCharacterAndHouse from "./Filters/FilterCharacterAndHouse";
 import { getCharacters } from "../services/characterApi";
 import CharacterDetail from "./characters/CharacterDetail";
 
+
 import "../styles/App.scss";
+
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -66,11 +68,14 @@ function App() {
   };
 
   return (
-    <div className="page">
-      <header>
-        <h1 className="title">Harry Potter</h1>
+    
+    <div className="">
+     
+      <header className="header">
+        <h1 className="titleHarry">Harry Potter</h1>
       </header>
       <main className="main">
+        
         <Router>
           <Routes>
             <Route
@@ -85,10 +90,12 @@ function App() {
                     handleChangeHouseFilter={handleChangeHouseFilter}
                   />
                   {/* Botón para restablecer los filtros */}
-                  <button onClick={handleReset} className="reset-button">
+                  <div className="containerResetBtn">
+                  <button onClick={handleReset} className="resetBtn">
                     Reset
                   </button>
-                  <section className="list">
+                  </div>
+                  <section className="">
                     {/* Componente que muestra la lista de personajes filtrados */}
                     <CharacterList characters={filteredCharacters} />
                   </section>
@@ -100,7 +107,11 @@ function App() {
           </Routes>
         </Router>
       </main>
+      <footer className="footer">
+      🧙‍♀️  Alejandrita's Things  🏰 
+      </footer>
     </div>
+    
   );
 }
 
