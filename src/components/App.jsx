@@ -3,7 +3,7 @@ import CharacterList from "./characters/CharacterList";
 import FilterCharacterAndHouse from "./Filters/FilterCharacterAndHouse";
 import { getCharacters } from "../services/characterApi";
 import CharacterDetail from "./characters/CharacterDetail";
-import FilterGender from "./Filters/FilterGender.jsx"; 
+import FilterGender from "./Filters/FilterGender.jsx";
 
 
 import "../styles/App.scss";
@@ -17,7 +17,7 @@ function App() {
   const [houseFilter, setHouseFilter] = useState('gryffindor');
   // Almacena la búsqueda del usuario
   const [search, setSearch] = useState('');
-  const [genderFilter, setGenderFilter] = useState('todos'); 
+  const [genderFilter, setGenderFilter] = useState('todos');
 
   // Función para obtener los personajes desde la API, 
   // filtrados por casa si es necesario
@@ -81,14 +81,14 @@ function App() {
   };
 
   return (
-    
+
     <>
-     
+
       <header className="header">
         <h1 className="titleHarry">Harry Potter</h1>
       </header>
       <main className="main">
-        
+
         <Router>
           <Routes>
             <Route
@@ -109,9 +109,9 @@ function App() {
                   />
                   {/* Botón para restablecer los filtros */}
                   <div className="containerResetBtn">
-                  <button onClick={handleReset} className="resetBtn">
-                    Reset
-                  </button>
+                    <button onClick={handleReset} className="resetBtn">
+                      Reset
+                    </button>
                   </div>
                   <section className="">
                     {/* Componente que muestra la lista de personajes filtrados */}
@@ -125,13 +125,13 @@ function App() {
           </Routes>
         </Router>
       </main>
-      
+
       <footer className="footer">
-      🧙‍♀️  Alejandrita&apos;ss Things  🏰 
+        🧙‍♀️  Alejandrita&apos;ss Things  🏰
       </footer>
-      
+
     </>
-    
+
   );
 }
 

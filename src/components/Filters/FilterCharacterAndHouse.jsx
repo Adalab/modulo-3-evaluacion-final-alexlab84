@@ -6,7 +6,7 @@ import { handleKeyDown } from '../../utils/eventHandlers';
 // Componente de formulario para filtrar personajes por nombre y casa
 function FilterCharacterAndHouse({ search, houseFilter, handleInputSearch, handleChangeHouseFilter }) {
 
-  
+
 
   return (
     <form className=''>
@@ -14,7 +14,7 @@ function FilterCharacterAndHouse({ search, houseFilter, handleInputSearch, handl
         <label htmlFor="character" className='labels'>Busca por personaje:</label>
         <input
           onChange={handleInputSearch}
-          onKeyDown={handleKeyDown} 
+          onKeyDown={handleKeyDown}
           type="text"
           name="character"
           id="character"

@@ -21,7 +21,7 @@ function CharacterDetail({ findCharacter }) {
         return (
             <div>
                 <h2>
-                    Personaje no encontrado  
+                    Personaje no encontrado
                 </h2>
             </div>
         )
@@ -30,59 +30,59 @@ function CharacterDetail({ findCharacter }) {
     const houseImageDetail = getHouseImage(characterShare.house);
 
     return (
-        
-        <>
-        <h2 className='detailTextTitle'>Detalle del personaje</h2>
-        <div className='containerDetail'>
-            
-        <div className="cardItemDetail">
-            <div className='backToBtn'>
-                <Link className='backToBtn' to="/"> Volver </Link>
-            </div>
-            
-            <img src={characterShare.image ? characterShare.image : houseImageDetail} alt="" className='cardImg'/>
-            
-                <p className='detailTextTitle'>
-                    {characterShare.name}
-                </p>
-                
-                {/* Mostrar el ícono de estado basado en si el personaje está vivo o no */}
-                <p className='detailText'>
-                Estatus: 
-                {characterShare.alive ? 
-                    <>
-                        <img src={corazon} alt="Está vivo" className='statusIcon' /> 
-                        <span className='detailText'>Vive</span>
-                    </> : 
-                    <>
-                        <img src={espinaDePescado} alt="No está vivo" className='statusIcon' />
-                        <span className='detailText'>Ha fallecido</span>
-                    </>}
-            </p>
-                <p className='detailText'>Especie: {characterShare.species}</p>
-                <p className='detailText'>Genero: {characterShare.gender}</p>
-                {/* Mostrar el ícono de la casa junto con el nombre */}
 
-                <p className='detailText'>
-                Casa: 
-                
-                {getHouseIcon(characterShare.house) && (
-                    <img 
-                        src={getHouseIcon(characterShare.house)} 
-                        alt={`Escudo de ${characterShare.house}`} 
-                        className='houseIcon' 
-                    />
-                )}
-                
-                {characterShare.house} 
-            </p>
-                {/* Muestra los nombres alternativos del personaje, si los tiene */}
-                <p className='detailText'>Nombres alternativos: {characterShare.alternate_names.join(', ') || 'Ninguno'}</p>
-                
-                
-        </div>
-        </div>
-        
+        <>
+            <h2 className='detailTextTitle'>Detalle del personaje</h2>
+            <div className='containerDetail'>
+
+                <div className="cardItemDetail">
+                    <div className='backToBtn'>
+                        <Link className='backToBtn' to="/"> Volver </Link>
+                    </div>
+
+                    <img src={characterShare.image ? characterShare.image : houseImageDetail} alt="" className='cardImg' />
+
+                    <p className='detailTextTitle'>
+                        {characterShare.name}
+                    </p>
+
+                    {/* Mostrar el ícono de estado basado en si el personaje está vivo o no */}
+                    <p className='detailText'>
+                        Estatus:
+                        {characterShare.alive ?
+                            <>
+                                <img src={corazon} alt="Está vivo" className='statusIcon' />
+                                <span className='detailText'>Vive</span>
+                            </> :
+                            <>
+                                <img src={espinaDePescado} alt="No está vivo" className='statusIcon' />
+                                <span className='detailText'>Ha fallecido</span>
+                            </>}
+                    </p>
+                    <p className='detailText'>Especie: {characterShare.species}</p>
+                    <p className='detailText'>Genero: {characterShare.gender}</p>
+                    {/* Mostrar el ícono de la casa junto con el nombre */}
+
+                    <p className='detailText'>
+                        Casa:
+
+                        {getHouseIcon(characterShare.house) && (
+                            <img
+                                src={getHouseIcon(characterShare.house)}
+                                alt={`Escudo de ${characterShare.house}`}
+                                className='houseIcon'
+                            />
+                        )}
+
+                        {characterShare.house}
+                    </p>
+                    {/* Muestra los nombres alternativos del personaje, si los tiene */}
+                    <p className='detailText'>Nombres alternativos: {characterShare.alternate_names.join(', ') || 'Ninguno'}</p>
+
+
+                </div>
+            </div>
+
         </>
     )
 }

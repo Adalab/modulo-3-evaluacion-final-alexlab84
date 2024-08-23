@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 function FilterGender({ genderFilter, handleChangeGenderFilter }) {
   return (
-    
+
     <div className="formInputs">
       <label htmlFor="gender" className="labels">
         Busca por genero:
@@ -18,7 +18,7 @@ function FilterGender({ genderFilter, handleChangeGenderFilter }) {
         <option value="female">Femenino</option>
       </select>
     </div>
-    
+
   );
 }
 

@@ -1,8 +1,8 @@
-# React + Vite
+# Buscador de personajes de Harry Potter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Es un sencillo programa en el cual obtenemos una lista de personajes de una api y podemos filtrarla por nombre del personaje, casa de Howargs a la que pertenece y genero.
 
-Currently, two official plugins are available:
+Tambien tiene una pagina de detalle, utilizando react-router-dom, a la cual se accede pulsando en cada tarjeta de personaje. En esta pagina mostramos el detalle de cada personaje con una serie de caracteristicas tambien recogidas de la api.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+

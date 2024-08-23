@@ -10,10 +10,10 @@ import { getHouseImage } from '../../utils/imageUtils';
 
 function CharacterItem({ character }) {
 
-  
 
-// Selecciona la imagen del personaje o la de la casa si no hay imagen
-const houseImage = getHouseImage(character.house);
+
+  // Selecciona la imagen del personaje o la de la casa si no hay imagen
+  const houseImage = getHouseImage(character.house);
 
   return (
     // Link de Router que redirige a la página de detalles del personaje seleccionado
@@ -24,17 +24,17 @@ const houseImage = getHouseImage(character.house);
       muestra una imagen segun a la casa que pertenezca u otra imagen si no
       pertenece a ninguna casa*/}
 
-<div className='cardItem'>
+      <div className='cardItem'>
         <img
           src={character.image ? character.image : houseImage}
           alt={`Foto de ${character.name}`}
           className="cardImg"
         />
 
-      <h2 className="cardTitle">{character.name}</h2>
+        <h2 className="cardTitle">{character.name}</h2>
 
-      {/* Muestra la especie del personaje, usando la función translateSpecies */}
-      <p className="speciesCard">{translateSpecies(character.species)}</p>
+        {/* Muestra la especie del personaje, usando la función translateSpecies */}
+        <p className="speciesCard">{translateSpecies(character.species)}</p>
       </div>
     </Link>
   );

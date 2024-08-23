@@ -1,21 +1,22 @@
-@import './core/reset';
-@import './core/variables';
+@import "./core/reset";
+@import "./core/variables";
 
 @font-face {
-  font-family: 'HarryP';
-  src: url('../../public/assets/HarryP-MVZ6w.ttf') format('truetype');
+  font-family: "HarryP";
+  src: url("../../public/assets/HarryP-MVZ6w.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-
 .titleHarry {
-  font-family: 'HarryP', sans-serif;
+  font-family: "HarryP", sans-serif;
   padding-bottom: 1.5rem;
   font-size: 5rem;
-    @media (min-width: 768px) {
-        font-size: 10rem;
+
+  @media (min-width: 768px) {
+    font-size: 10rem;
   }
+
   color: rgb(231, 187, 129);
   font-weight: normal;
 }
@@ -30,15 +31,13 @@
 
 .footer {
   background-color: rgb(134, 122, 134);
-  font-family: 'HarryP', sans-serif;
+  font-family: "HarryP", sans-serif;
   font-size: medium;
   color: rgb(2, 49, 49);
   text-align: center;
   align-items: center;
   padding-top: 100px;
 }
-
-
 
 .containerResetBtn {
   display: flex;
@@ -48,124 +47,112 @@
 
 .resetBtn {
   width: 50%;
-    @media (min-width: 768px) {
-      width: 20%;
-    }
-    @media (min-width: 1200px) {
-      width: 10%;
-    }
+
+  @media (min-width: 768px) {
+    width: 20%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 10%;
+  }
+
   height: 2em;
-  font-family: 'HarryP', sans-serif;
+  font-family: "HarryP", sans-serif;
   font-size: x-large;
   color: rgb(2, 49, 49);
   border-radius: 20px;
   border: solid 2px rgb(2, 49, 49);
   background-color: rgb(231, 187, 129);
-  
 }
 
 .backToBtn {
   color: rgb(2, 49, 49);
-  font-family: 'HarryP', sans-serif;
+  font-family: "HarryP", sans-serif;
   font-size: xx-large;
   text-align: center;
   margin-bottom: 20px;
 }
 
 .main {
-    
-    background-color: rgb(134, 122, 134);
-    
-  
-     @media (min-width: 600px) {
-      
-     }
+  background-color: rgb(134, 122, 134);
+}
+
+.cardItem {
+  width: 250px;
+  height: 320px;
+  text-align: center;
+  border: solid 2px rgb(2, 49, 49);
+  border-radius: 20px;
+  background-color: rgb(231, 187, 129);
+  padding-top: 30px;
+  margin-block: 20px;
+}
+
+.containerDetail {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.cardItemDetail {
+  text-align: center;
+  width: 90%;
+  border: solid 2px rgb(2, 49, 49);
+  border-radius: 20px;
+  background-color: rgb(231, 187, 129);
+
+  @media (min-width: 768px) {
+    width: 300px;
   }
-  
-   
+}
 
+.detailText {
+  font-family: "HarryP", sans-serif;
+  font-size: x-large;
+  color: rgb(2, 49, 49);
+}
 
-  
+.detailTextTitle {
+  font-family: "HarryP", sans-serif;
+  font-size: xx-large;
+  color: rgb(99, 20, 10);
+  text-align: center;
+  padding-bottom: 20px;
+}
 
-  .cardItem {
-    width: 250px;
-    height: 320px;
-    text-align: center;
-    border: solid 2px rgb(2, 49, 49);
-    border-radius: 20px;
-    background-color: rgb(231, 187, 129);
-    padding-top: 30px;
-    margin-block: 20px;
-    
-  }
+.cardList {
+  display: flex;
+  flex-direction: column;
 
-  .containerDetail {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    @media (min-width:768px) {
-      
-    }
-  }
-
-  .cardItemDetail {
-    text-align: center;
-    width: 90%;
-    border: solid 2px rgb(2, 49, 49);
-    border-radius: 20px;
-    background-color: rgb(231, 187, 129);
-      @media (min-width:768px) {
-        width: 300px;
-        
-      }
-  }
-
-  .detailText {
-    font-family: 'HarryP', sans-serif;
-    font-size: x-large;
-    color: rgb(2, 49, 49);
-  }
-
-  .detailTextTitle {
-    font-family: 'HarryP', sans-serif;
-    font-size: xx-large;
-    color: rgb(99, 20, 10);
-    text-align: center;
-    padding-bottom: 20px;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-inline: 50px;
   }
 
-  .cardList {
-    display: flex;
-    flex-direction: column;
-      @media (min-width: 768px) {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin-inline: 50px;
-      }
-      
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
-  }
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
 
-  .speciesCard {
-    font-family: 'HarryP', sans-serif;
-    font-size: x-large;
-    color: rgb(2, 49, 49);
-  }
+.speciesCard {
+  font-family: "HarryP", sans-serif;
+  font-size: x-large;
+  color: rgb(2, 49, 49);
+}
 
-  .cardImg {
-    width: 200px;
-    height: 250px;
-    border-radius: 20px;
-  }
+.cardImg {
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+}
 
-  .cardTitle {
-    font-family: 'HarryP', sans-serif;
-    font-size: xx-large;
-    color: rgb(2, 49, 49);
-  }
+.cardTitle {
+  font-family: "HarryP", sans-serif;
+  font-size: xx-large;
+  color: rgb(2, 49, 49);
+}
 
 .formInputs {
   display: flex;
@@ -177,16 +164,18 @@
 .input {
   height: 40px;
   width: 90%;
+
   @media (min-width: 768px) {
     width: 50%;
   }
+
   @media (min-width: 1200px) {
     width: 30%;
   }
-  
+
   border-radius: 10px;
   border: solid 2px rgb(2, 49, 49);
-  font-family: 'HarryP', sans-serif;
+  font-family: "HarryP", sans-serif;
   font-size: 140%;
   color: rgb(2, 49, 49);
 }
@@ -196,7 +185,7 @@
 }
 
 .labels {
-  font-family: 'HarryP', sans-serif;
+  font-family: "HarryP", sans-serif;
   font-size: xx-large;
   color: rgb(231, 187, 129);
 }
@@ -210,22 +199,21 @@ ul {
 }
 
 .statusIcon {
-  width: 32px;  
+  width: 32px;
   height: 32px;
   vertical-align: middle;
-  margin-left: 5px;  
+  margin-left: 5px;
 }
 
 .houseIcon {
-  width: 24px;  
+  width: 24px;
   height: 24px;
-  margin-left: 5px;  
+  margin-left: 5px;
   vertical-align: middle;
 }
 
 .notFoundCharacters {
-  font-family: 'HarryP', sans-serif;
+  font-family: "HarryP", sans-serif;
   font-size: xx-large;
   color: rgb(99, 20, 10);
 }
-
