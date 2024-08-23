@@ -127,7 +127,7 @@ function App() {
       </main>
       
       <footer className="footer">
-      🧙‍♀️  Alejandrita's Things  🏰 
+      🧙‍♀️  Alejandrita&apos;ss Things  🏰 
       </footer>
       
     </>

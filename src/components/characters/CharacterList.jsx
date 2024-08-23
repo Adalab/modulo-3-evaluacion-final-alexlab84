@@ -7,7 +7,7 @@ function CharacterList({ characters, characterNotFound }) {
 
 
   return (
-    <div>
+    <div className="cardList">
       {characterNotFound ? (
         <p>{characterNotFound}</p>  // Muestra el mensaje si no se encuentran personajes
       ) : (

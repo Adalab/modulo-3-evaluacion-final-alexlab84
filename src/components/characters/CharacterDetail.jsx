@@ -14,9 +14,6 @@ function CharacterDetail({ findCharacter }) {
     const characterShare = findCharacter(params.id);
 
 
-    const houseImageDetail = getHouseImage(characterShare.house);
-
-
     // Si no se encuentra el personaje (es undefined), 
     // muestra un mensaje de error, si la api no devolviese datos
 
@@ -30,13 +27,14 @@ function CharacterDetail({ findCharacter }) {
         )
     }
 
-    
+    const houseImageDetail = getHouseImage(characterShare.house);
 
     return (
         
         <>
-        
-
+        <h2 className='detailTextTitle'>Detalle del personaje</h2>
+        <div className='containerDetail'>
+            
         <div className="cardItemDetail">
             <div className='backToBtn'>
                 <Link className='backToBtn' to="/"> Volver </Link>
@@ -52,8 +50,14 @@ function CharacterDetail({ findCharacter }) {
                 <p className='detailText'>
                 Estatus: 
                 {characterShare.alive ? 
-                    <img src={corazon} alt="Está vivo" className='statusIcon' /> : 
-                    <img src={espinaDePescado} alt="No está vivo" className='statusIcon' />}
+                    <>
+                        <img src={corazon} alt="Está vivo" className='statusIcon' /> 
+                        <span className='detailText'>Vive</span>
+                    </> : 
+                    <>
+                        <img src={espinaDePescado} alt="No está vivo" className='statusIcon' />
+                        <span className='detailText'>Ha fallecido</span>
+                    </>}
             </p>
                 <p className='detailText'>Especie: {characterShare.species}</p>
                 <p className='detailText'>Genero: {characterShare.gender}</p>
@@ -76,6 +80,7 @@ function CharacterDetail({ findCharacter }) {
                 <p className='detailText'>Nombres alternativos: {characterShare.alternate_names.join(', ') || 'Ninguno'}</p>
                 
                 
+        </div>
         </div>
         
         </>
