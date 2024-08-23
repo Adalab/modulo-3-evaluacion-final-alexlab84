@@ -3,6 +3,7 @@ import CharacterList from "./characters/CharacterList";
 import FilterCharacterAndHouse from "./Filters/FilterCharacterAndHouse";
 import { getCharacters } from "../services/characterApi";
 import CharacterDetail from "./characters/CharacterDetail";
+import FilterGender from "./Filters/FilterGender.jsx"; 
 
 
 import "../styles/App.scss";
@@ -12,10 +13,11 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   // Almacena la lista de personajes
   const [characters, setCharacters] = useState([]);
-  // Almacena el filtro de casa seleccionada, inicialmente todas las casas
-  const [houseFilter, setHouseFilter] = useState('');
+  // Almacena el filtro de casa seleccionada, inicialmente Gryffindor
+  const [houseFilter, setHouseFilter] = useState('gryffindor');
   // Almacena la búsqueda del usuario
   const [search, setSearch] = useState('');
+  const [genderFilter, setGenderFilter] = useState('todos'); 
 
   // Función para obtener los personajes desde la API, 
   // filtrados por casa si es necesario
@@ -51,15 +53,26 @@ function App() {
     setHouseFilter(newValue); // Actualiza el estado con el nuevo filtro de casa
   };
 
+  // Función para manejar el cambio en el filtro de género
+  const handleChangeGenderFilter = (ev) => {
+    setGenderFilter(ev.currentTarget.value); // Actualiza el estado con el nuevo filtro de género
+  };
+
   // Función para restablecer los filtros a sus valores predeterminados
   const handleReset = () => {
     setHouseFilter(''); // Restableces a todas las casas
     setSearch(''); // Borrar el campo de búsqueda
+    setGenderFilter('todos'); // Restablece el filtro de género
   };
 
   // Filtra los personajes según el texto ingresado
-  const filteredCharacters = characters.filter(character =>
+  const charactersFilteredByName = characters.filter(character =>
     character.name.toLowerCase().includes(search)
+  );
+
+  // Filtra los personajes según el género seleccionado
+  const filteredCharacters = charactersFilteredByName.filter(character =>
+    genderFilter === 'todos' || character.gender === genderFilter
   );
 
   // Función para encontrar un personaje por su id
@@ -69,7 +82,7 @@ function App() {
 
   return (
     
-    <div className="containerStructure">
+    <>
      
       <header className="header">
         <h1 className="titleHarry">Harry Potter</h1>
@@ -88,6 +101,11 @@ function App() {
                     houseFilter={houseFilter}
                     handleInputSearch={handleInputSearch}
                     handleChangeHouseFilter={handleChangeHouseFilter}
+                  />
+                  {/* Componente de filtro para género */}
+                  <FilterGender
+                    genderFilter={genderFilter}
+                    handleChangeGenderFilter={handleChangeGenderFilter}
                   />
                   {/* Botón para restablecer los filtros */}
                   <div className="containerResetBtn">
@@ -112,7 +130,7 @@ function App() {
       🧙‍♀️  Alejandrita's Things  🏰 
       </footer>
       
-    </div>
+    </>
     
   );
 }

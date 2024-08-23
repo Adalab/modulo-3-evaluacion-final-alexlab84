@@ -36,10 +36,7 @@
   padding-top: 20px;
 }
 
-.containerStructure {
-  background-color: rgb(134, 122, 134);
-  
-}
+
 
 .containerResetBtn {
   display: flex;
@@ -171,6 +168,10 @@
   color: rgb(2, 49, 49);
 }
 
+::placeholder {
+  color: rgb(2, 49, 49);
+}
+
 .labels {
   font-family: 'HarryP', sans-serif;
   font-size: xx-large;
@@ -197,5 +198,11 @@ ul {
   height: 24px;
   margin-left: 5px;  
   vertical-align: middle;
+}
+
+.notFoundCharacters {
+  font-family: 'HarryP', sans-serif;
+  font-size: xx-large;
+  color: rgb(99, 20, 10);
 }
 

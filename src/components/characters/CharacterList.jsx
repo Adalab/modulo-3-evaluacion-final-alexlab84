@@ -13,7 +13,7 @@ function CharacterList({ characters, characterNotFound }) {
       ) : (
         <ul className="cardList">
           {characters.length === 0 ? (
-            <p>No hay personajes disponibles.</p>  // Mensaje alternativo si no hay personajes
+            <p className='notFoundCharacters'>No hay personajes disponibles.</p>  // Mensaje alternativo si no hay personajes
           ) : (
             characters.map((character) => (
               <li key={character.id} className="">
